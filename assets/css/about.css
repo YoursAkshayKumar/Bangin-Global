@@ -1,0 +1,301 @@
+/* Background Image */
+body {
+  background-color: #FAEFD9 !important;
+  background-image: url("../images/brand-background.png") !important;
+  background-repeat: repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+}
+
+/* Custom styles for About page */
+.about-hero {
+  background: linear-gradient(135deg, #1540D8 0%, #71B5FF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q300,20 600,60 T1200,60 L1200,120 L0,120 Z" fill="rgba(255,255,255,0.05)"/></svg>') repeat-x;
+  background-size: 1200px 120px;
+  opacity: 0.3;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-logo-large {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #FAEFD9;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-primary) !important;
+}
+
+.lightning-bolt {
+  color: #F2BB05;
+  display: inline-block;
+  transform: rotate(-15deg);
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin: 0 0.1em;
+}
+
+.lightning-bolt svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.section-divider {
+  height: 100px;
+  background: linear-gradient(180deg, transparent 0%, #FAEFD9 100%);
+}
+
+/* Background pattern - reusable */
+.gem-pattern {
+  background-color: #FAEFD9;
+  background-image: url("../images/brand-background.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-foam-gold {
+  background-color: #FAEFD9 !important;
+  background-image: url("../images/brand-background.png") !important;
+  background-size: cover !important;
+  background-repeat: repeat !important;
+  background-position: center center !important;
+}
+
+.bg-white {
+  background-color: #FAEFD9 !important;
+  background-image: url("../images/brand-background.png") !important;
+  background-size: cover !important;
+  background-repeat: repeat !important;
+  background-position: center center !important;
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(21, 64, 216, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(21, 64, 216, 0.2);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1540D8;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #F2BB05 0%, #1540D8 100%);
+  border-radius: 2px;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #71B5FF;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.wave-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(113, 185, 255, 0.05) 10px,
+    rgba(113, 185, 255, 0.05) 20px
+  );
+  pointer-events: none;
+}
+
+.hero-image-container {
+  position: relative;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.hero-product-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(21, 64, 216, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.image-section {
+  position: relative;
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.image-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.image-section-content {
+  position: relative;
+  z-index: 1;
+}
+
+.product-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.product-showcase-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.product-showcase-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.product-showcase-content {
+  flex: 1;
+}
+
+.lifestyle-image {
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.lifestyle-image img {
+  width: 100%;
+  height: auto;
+}
+
+.split-image-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.split-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .brand-logo-large {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .content-card {
+    padding: 2rem;
+  }
+  
+  .product-showcase {
+    flex-direction: column;
+  }
+  
+  .product-showcase-image {
+    order: 1;
+  }
+  
+  .product-showcase-content {
+    order: 2;
+  }
+  
+  .split-image-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+

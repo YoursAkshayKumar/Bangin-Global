@@ -1,0 +1,1514 @@
+/* New Color Palette Override Styles */
+/* Electric Tide: #1540D8 | Foam Gold: #FAEFD9 | Sky Surge: #75B9F2 | Midnight Pulse: #151922 | Golden Bang: #F2BB05 */
+
+:root {
+  /* Primary Colors */
+  --color-primary: var(--wp--preset--color--sky-surge);
+  --color-primary-dark: var(--wp--preset--color--electric-tide);
+  --color-accent: var(--wp--preset--color--golden-bang);
+  --color-light: var(--wp--preset--color--foam-gold);
+  --color-dark: var(--wp--preset--color--midnight-pulse);
+  
+  /* Secondary/Info/Gray color mappings */
+  --color-secondary: var(--wp--preset--color--foam-gold);
+  --color-info: var(--wp--preset--color--sky-surge);
+  --color-gray: var(--wp--preset--color--foam-gold);
+  
+  /* Legacy color overrides */
+  --wp--preset--color--primary: var(--wp--preset--color--sky-surge);
+}
+
+/* Background Colors */
+.bg-primary,
+.bg-primary-color {
+  background-color: var(--wp--preset--color--sky-surge) !important;
+}
+
+.bg-primary-dark,
+.bg-electric-tide {
+  background-color: var(--wp--preset--color--electric-tide) !important;
+}
+
+.bg-secondary {
+  background-color: var(--wp--preset--color--golden-bang) !important;
+}
+
+.bg-info {
+  background-color: var(--wp--preset--color--sky-surge) !important;
+  color: var(--wp--preset--color--midnight-pulse) !important;
+}
+
+.bg-gray {
+  background-color: var(--wp--preset--color--foam-gold) !important;
+}
+
+.bg-accent,
+.bg-golden-bang {
+  background-color: var(--wp--preset--color--golden-bang) !important;
+}
+
+.bg-light,
+.bg-foam-gold {
+  background-color: var(--wp--preset--color--foam-gold) !important;
+}
+
+.bg-dark,
+.bg-midnight-pulse {
+  background-color: var(--wp--preset--color--midnight-pulse) !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--wp--preset--color--electric-tide) !important;
+}
+
+.text-primary-dark,
+.text-electric-tide {
+  color: var(--wp--preset--color--electric-tide) !important;
+}
+
+.text-accent,
+.text-golden-bang {
+  color: var(--wp--preset--color--golden-bang) !important;
+}
+
+.text-dark,
+.text-midnight-pulse {
+  color: var(--wp--preset--color--midnight-pulse) !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-light {
+  color: var(--wp--preset--color--foam-gold) !important;
+}
+
+/* Header & Navigation */
+.banner,
+header.banner,
+#stickyNav {
+  background-color: var(--wp--preset--color--electric-tide) !important;
+  position: relative;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Ensure header has proper z-index on mobile to stay above content */
+@media (max-width: 991.98px) {
+  #stickyNav {
+    z-index: 1000 !important;
+    position: fixed !important;
+  }
+  
+  #stickyNav .container,
+  #stickyNav .row {
+    position: relative !important;
+    z-index: 1001 !important;
+  }
+}
+
+#stickyNav .nav-primary,
+#stickyNav .nav {
+  position: relative;
+  z-index: 10; /* Ensure navigation is above curve */
+}
+
+#stickyNav .nav-item {
+  position: relative;
+  z-index: 10; /* Ensure nav items are above curve */
+}
+
+#stickyNav .nav-item a {
+  position: relative;
+  z-index: 10; /* Ensure nav links are above curve */
+  display: block;
+  text-decoration: none;
+}
+
+#stickyNav .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stickyNav .brand img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  #stickyNav .row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+  
+  #stickyNav .row > .col-0.col-lg-auto {
+    grid-column: 1;
+    justify-self: start;
+  }
+  
+  #stickyNav .row > .col.col-md-auto {
+    grid-column: 2;
+    justify-self: center;
+  }
+  
+  #stickyNav .row > .col-auto.col-md.col-lg-auto {
+    grid-column: 3;
+    justify-self: end;
+  }
+}
+
+.nav-link {
+  color: #ffffff !important; /* Midnight Pulse */
+  position: relative;
+  z-index: 10; /* Ensure nav links are above other elements */
+  pointer-events: auto; /* Ensure nav links are clickable */
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #ffffff !important; /* Electric Tide */
+}
+
+/* Mobile fix: Ensure content is visible below fixed header */
+@media (max-width: 991.98px) {
+  /* Fix #app overflow that might be hiding content */
+  #app {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    position: relative !important;
+  }
+  
+  body {
+    padding-top: 80px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    position: relative !important;
+    background-color: #ffffff !important;
+  }
+  
+  html {
+    overflow-x: hidden !important;
+    height: 100% !important;
+  }
+  
+  /* Ensure header doesn't cover content */
+  header.banner,
+  #stickyNav {
+    height: auto !important;
+    max-height: 80px !important;
+    min-height: 60px !important;
+    display: block !important;
+    visibility: visible !important;
+    z-index: 1000 !important;
+    padding: 0.5rem 0 !important;
+  }
+  
+  #stickyNav .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Fix Bootstrap col-0 hiding nav on mobile - override Bootstrap's width: 0 */
+  #stickyNav .col-0 {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    max-width: none !important;
+    display: block !important;
+  }
+  
+  /* Header row layout on mobile - logo left, menu right */
+  #stickyNav .row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+    overflow: visible !important;
+  }
+  
+  #stickyNav .container {
+    overflow: visible !important;
+  }
+  
+  /* Hide col-0 nav on mobile (we'll use overlay menu instead) */
+  #stickyNav .col-0 {
+    display: none !important;
+  }
+  
+  /* Logo/Brand styling - LEFT side on mobile */
+  #stickyNav .col.col-md-auto {
+    order: 1 !important;
+    flex: 0 0 auto !important;
+    margin-right: auto !important;
+  }
+  
+  #stickyNav .brand {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1001 !important;
+    width: auto !important;
+    height: auto !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+  }
+  
+  #stickyNav .brand img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 140px !important;
+    max-height: 45px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+  }
+  
+  /* Hamburger menu icon container - ONLY visible on mobile */
+  @media (max-width: 991.98px) {
+    #stickyNav .col-auto.px-1.mx-1.d-lg-none {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      order: 2 !important;
+      flex: 0 0 auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: auto !important;
+      max-width: none !important;
+      padding-left: 0.5rem !important;
+      padding-right: 0.5rem !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+    }
+  }
+  
+  /* Force hide hamburger container on desktop */
+  @media (min-width: 992px) {
+    #stickyNav .col-auto.px-1.mx-1.d-lg-none {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  }
+  
+  /* Mobile nav toggle - ONLY visible on mobile devices */
+  @media (max-width: 991.98px) {
+    #stickyNav .nav-toggle.d-lg-none {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      z-index: 10000 !important;
+      color: #ffffff !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0.75rem !important;
+      margin: 0 !important;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 44px !important;
+      height: 44px !important;
+      min-width: 44px !important;
+      min-height: 44px !important;
+      position: relative !important;
+    }
+    
+    /* Ensure the nav-toggle container is also clickable */
+    #stickyNav .col-auto.px-1.mx-1.d-lg-none {
+      pointer-events: auto !important;
+      z-index: 10000 !important;
+      position: relative !important;
+    }
+    
+    /* Ensure the nav-toggle link element is clickable */
+    #stickyNav .nav-toggle.d-lg-none,
+    #stickyNav a.nav-toggle.d-lg-none {
+      pointer-events: auto !important;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0.3) !important;
+      touch-action: manipulation !important;
+    }
+  }
+  
+  /* Force hide nav toggle on desktop */
+  @media (min-width: 992px) {
+    #stickyNav .nav-toggle.d-lg-none,
+    #stickyNav .nav-toggle.d-lg-none::before,
+    #stickyNav .nav-toggle.d-lg-none::after,
+    #stickyNav .nav-toggle .burger-line {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  }
+  
+  /* Hamburger menu styling and animations - ONLY on mobile */
+  @media (max-width: 991.98px) {
+    /* Ensure toggle stays above menu overlay when open - Close button styling */
+    body.nav-open #stickyNav .nav-toggle.d-lg-none {
+      z-index: 10001 !important;
+      position: fixed !important;
+      top: 24px !important;
+      right: 24px !important;
+      /* background-color: #ffffff !important; */
+      border-radius: 50% !important;
+      width: 52px !important;
+      height: 52px !important;
+      /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important; */
+      transition: all 0.3s ease !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    body.nav-open #stickyNav .nav-toggle.d-lg-none:hover {
+      /* background-color: #ffffff !important; */
+      /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important; */
+      transform: scale(1.07) !important;
+    }
+    
+    body.nav-open #stickyNav .nav-toggle.d-lg-none:active {
+      transform: scale(0.95) !important;
+    }
+    
+    body.nav-open #stickyNav .nav-toggle.d-lg-none::before,
+    body.nav-open #stickyNav .nav-toggle.d-lg-none::after {
+      background-color: #151922 !important;
+      width: 22px !important;
+      height: 3.5px !important;
+      border-radius: 2px !important;
+    }
+    
+    /* Create three-line hamburger menu - all white with !important */
+    #stickyNav .nav-toggle.d-lg-none::before,
+    #stickyNav .nav-toggle.d-lg-none::after,
+    #stickyNav .nav-toggle .burger-line {
+      content: '' !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      width: 24px !important;
+      height: 3px !important;
+      /* background-color: #ffffff !important; */
+      border-radius: 2px !important;
+      transition: all 0.3s ease !important;
+      position: absolute !important;
+      left: 50% !important;
+      margin-left: -12px !important;
+    }
+    
+    /* Middle line - centered vertically */
+    #stickyNav .nav-toggle .burger-line {
+      top: 50% !important;
+      transform: translateY(-50%) !important;
+      /* background-color: #ffffff !important; */
+    }
+    
+    /* Top line */
+    #stickyNav .nav-toggle.d-lg-none::before {
+      top: 12px !important;
+      transform: translateX(-50%) !important;
+      /* background-color: #ffffff !important; */
+    }
+    
+    /* Bottom line */
+    #stickyNav .nav-toggle.d-lg-none::after {
+      bottom: 12px !important;
+      transform: translateX(-50%) !important;
+      /* background-color: #ffffff !important; */
+    }
+    
+    /* Hamburger animation when menu is open - transforms to X */
+    body.nav-open #stickyNav .nav-toggle.d-lg-none .burger-line {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+    
+    body.nav-open #stickyNav .nav-toggle.d-lg-none::before {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg) !important;
+      top: 50% !important;
+      bottom: auto !important;
+      /* background-color: #ffffff !important; */
+    }
+    
+    body.nav-open #stickyNav .nav-toggle.d-lg-none::after {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg) !important;
+      bottom: auto !important;
+      top: 50% !important;
+      /* background-color: #ffffff !important; */
+    }
+  }
+  
+  /* Desktop nav-primary - always visible on desktop */
+  @media (min-width: 992px) {
+    #stickyNav .nav-primary {
+      display: block !important;
+      position: static !important;
+      background-color: transparent !important;
+      width: auto !important;
+      height: auto !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  /* Mobile: Hide nav-primary initially, show in overlay when menu opens */
+  @media (max-width: 991.98px) {
+    #stickyNav .nav-primary {
+      display: none !important;
+    }
+    
+    /* Show nav-primary menu in overlay when menu is open on mobile */
+    body.nav-open #stickyNav .nav-primary {
+      display: block !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 70vh !important;
+      background-color: #F2BB05 !important; /* Golden Bang - solid color */
+      z-index: 9998 !important;
+      padding: 80px 2rem 2rem !important;
+      overflow-y: auto !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    
+    body.nav-open #stickyNav .nav-primary .nav {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      height: 100% !important;
+      gap: 2rem !important;
+      visibility: visible !important;
+    }
+    
+    body.nav-open #stickyNav .nav-primary .nav-item {
+      width: 100% !important;
+      text-align: center !important;
+      display: block !important;
+      visibility: visible !important;
+    }
+    
+    body.nav-open #stickyNav .nav-primary .nav-link {
+      color: #151922 !important;
+      font-size: 1.5rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      padding: 1rem !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+    }
+    
+    body.nav-open #stickyNav .nav-primary .nav-link:hover {
+      color: #1540D8 !important;
+      transform: scale(1.05) !important;
+    }
+  }
+  
+  /* Mobile navigation overlay menu - ONLY on mobile devices */
+  @media (max-width: 991.98px) {
+    #stickyNav .navigation {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100vh !important;
+      background-color: #F2BB05 !important; /* Golden Bang - solid color for better visibility */
+      z-index: 9999 !important;
+      display: none !important;
+      overflow-y: auto !important;
+      padding: 0 !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+  }
+  
+  /* Desktop navigation - normal positioning */
+  @media (min-width: 992px) {
+    #stickyNav .navigation {
+      position: static !important;
+      width: auto !important;
+      height: auto !important;
+      background-color: transparent !important;
+      display: block !important;
+      overflow-y: visible !important;
+      z-index: auto !important;
+    }
+  }
+  
+  /* Show navigation menu when toggled - ONLY on mobile devices */
+  @media (max-width: 991.98px) {
+    body.nav-open #stickyNav .navigation,
+    body.nav-open #stickyNav .navigation.d-none {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      padding-top: 100px !important;
+    }
+    
+    body.nav-open #stickyNav .navigation .mobile-nav-content {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 3rem 2rem 8rem !important;
+      gap: 0 !important;
+      min-height: calc(100vh - 100px) !important;
+    }
+    
+    /* Ensure nav-primary comes first, social icons last */
+    body.nav-open #stickyNav .navigation .mobile-nav-content .nav-primary {
+      order: 1 !important;
+      flex: 0 0 auto !important;
+      margin-bottom: auto !important;
+    }
+    
+    body.nav-open #stickyNav .navigation .mobile-nav-content .mobile-social-icons {
+      order: 2 !important;
+      flex: 0 0 auto !important;
+      margin-top: auto !important;
+    }
+  }
+  
+  /* Ensure nav-open state doesn't affect desktop */
+  @media (min-width: 992px) {
+    body.nav-open #stickyNav .navigation,
+    body.nav-open #stickyNav .navigation.d-none {
+      display: block !important;
+      position: static !important;
+      background-color: transparent !important;
+    }
+    
+    body.nav-open #stickyNav .navigation .mobile-nav-content {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  }
+  
+  /* Mobile navigation content container - ALWAYS hidden by default */
+  #stickyNav .navigation .mobile-nav-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding: 3rem 2rem 4rem !important;
+    gap: 3rem !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+  }
+  
+  /* Show mobile nav content ONLY when menu is open on mobile */
+  @media (max-width: 991.98px) {
+    body.nav-open #stickyNav .navigation .mobile-nav-content {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: auto !important;
+      overflow: visible !important;
+      pointer-events: auto !important;
+    }
+  }
+  
+  /* FORCE hide on desktop - multiple layers of protection */
+  @media (min-width: 992px) {
+    #stickyNav .navigation .mobile-nav-content,
+    #stickyNav .navigation .mobile-nav-content * {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+      max-width: 0 !important;
+      max-height: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      pointer-events: none !important;
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+    }
+  }
+  
+  /* Mobile social icons styling - hidden by default */
+  #stickyNav .navigation .mobile-social-icons {
+    display: none !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 2.5rem 0 0 !important;
+    margin-top: 2rem !important;
+    border-top: 2px solid rgba(21, 25, 34, 0.15) !important;
+    order: 999 !important; /* Ensure it appears at the bottom */
+  }
+  
+  /* Show mobile social icons only when menu is open on mobile */
+  @media (max-width: 991.98px) {
+    body.nav-open #stickyNav .navigation .mobile-social-icons {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  /* Force hide on desktop */
+  @media (min-width: 992px) {
+    #stickyNav .navigation .mobile-social-icons {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+  }
+  
+  /* Mobile social icons child styling - ONLY on mobile devices */
+  @media (max-width: 991.98px) {
+    #stickyNav .navigation .mobile-social-icons .social-icons {
+      display: flex !important;
+      gap: 1.5rem !important;
+      justify-content: center !important;
+      align-items: center !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    #stickyNav .navigation .mobile-social-icons .social-icons {
+      gap: 1.5rem !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+    }
+    
+    #stickyNav .navigation .mobile-social-icons .social-icons a {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 60px !important;
+      height: 60px !important;
+      background-color: #151922 !important; /* Midnight Pulse - Dark circles */
+      border-radius: 50% !important;
+      color: #ffffff !important; /* White icons */
+      font-size: 1.75rem !important;
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 10000 !important;
+      box-shadow: 0 4px 12px rgba(21, 25, 34, 0.25) !important;
+    }
+    
+    #stickyNav .navigation .mobile-social-icons .social-icons a i {
+      display: inline-block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      color: #ffffff !important;
+    }
+    
+    #stickyNav .navigation .mobile-social-icons .social-icons a:hover {
+      background-color: #1540D8 !important; /* Electric Tide */
+      color: #ffffff !important;
+      transform: translateY(-4px) scale(1.08) !important;
+      box-shadow: 0 8px 20px rgba(21, 64, 216, 0.35) !important;
+    }
+    
+    #stickyNav .navigation .mobile-social-icons .social-icons a:active {
+      transform: translateY(-2px) scale(1.05) !important;
+      box-shadow: 0 4px 12px rgba(21, 64, 216, 0.3) !important;
+    }
+  }
+  
+  /* Mobile menu items styling - ONLY on mobile devices */
+  @media (max-width: 991.98px) {
+    #stickyNav .navigation .mobile-nav-content .nav-primary {
+      display: flex !important;
+      width: 100% !important;
+      justify-content: center !important;
+      align-items: center !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 0 2rem 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      gap: 1rem !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-item {
+      width: 100% !important;
+      max-width: 100% !important;
+      text-align: center !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      display: block !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-link {
+      color: #151922 !important; /* Midnight Pulse - Dark text */
+      font-size: 1.3rem !important;
+      font-weight: 800 !important;
+      text-transform: uppercase !important;
+      text-decoration: none !important;
+      padding: 0.5rem 1rem !important;
+      display: block !important;
+      transition: all 0.3s ease !important;
+      letter-spacing: 0.2em !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      position: relative !important;
+      z-index: 10000 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+      text-align: center !important;
+      line-height: 0.8 !important;
+      border-bottom: 1px solid #151922 !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-link:hover,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-link:focus {
+      color: #1540D8 !important; /* Electric Tide */
+      background-color: rgba(21, 64, 216, 0.08) !important;
+      transform: translateX(4px) !important;
+    }
+    
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-link:active {
+      background-color: rgba(21, 64, 216, 0.12) !important;
+      transform: translateX(2px) !important;
+    }
+  }
+  
+  /* Force hide all mobile menu elements on desktop - MAXIMUM SPECIFICITY */
+  @media (min-width: 992px) {
+    #stickyNav .navigation .mobile-nav-content,
+    #stickyNav .navigation .mobile-nav-content *,
+    #stickyNav .navigation .mobile-nav-content .nav-primary,
+    #stickyNav .navigation .mobile-nav-content .nav-primary *,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav *,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-item,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-item *,
+    #stickyNav .navigation .mobile-nav-content .nav-primary .nav-link,
+    #stickyNav .navigation .mobile-nav-content .mobile-social-icons,
+    #stickyNav .navigation .mobile-nav-content .mobile-social-icons *,
+    #stickyNav .navigation .mobile-nav-content .social-icons,
+    #stickyNav .navigation .mobile-nav-content .social-icons *,
+    #menu-main-menu_mobile,
+    #menu-main-menu_mobile * {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      height: 0 !important;
+      width: 0 !important;
+      max-height: 0 !important;
+      max-width: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+      clip: rect(0, 0, 0, 0) !important;
+    }
+  }
+  
+  /* Ensure header curve SVG doesn't cover content on mobile */
+  header.banner .curve,
+  header.banner object.curve,
+  header.banner img.curve {
+    z-index: -1 !important;
+    pointer-events: none !important;
+    display: none !important; /* Hide curve on mobile to prevent issues */
+  }
+  
+  /* Ensure banner section content is visible */
+  section.banner {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    width: 100% !important;
+    overflow: visible !important;
+    background-color: transparent !important;
+    /* Allow touch interactions for slider */
+    touch-action: pan-y !important;
+  }
+  
+  section.banner .banner-inner {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    position: relative !important;
+    /* Allow horizontal touch gestures for slider on mobile */
+    touch-action: pan-x pan-y !important;
+  }
+  
+  /* Tiny Slider - fix width calculation for proper slide transitions */
+  section.banner {
+    overflow: hidden !important;
+    /* Ensure slider is visible for autoplay to work */
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  section.banner .tns-outer {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Allow horizontal touch gestures for slider on mobile */
+    touch-action: pan-x pan-y !important;
+  }
+  
+  section.banner .tns-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    position: relative !important;
+    /* Allow horizontal touch gestures for slider on mobile */
+    touch-action: pan-x pan-y !important;
+  }
+  
+  section.banner .tns-slider {
+    display: flex !important;
+    transition: transform 0.8s ease !important;
+    /* Allow horizontal touch gestures for slider on mobile */
+    touch-action: pan-x pan-y !important;
+    width: auto !important;
+    will-change: transform !important;
+  }
+  
+  /* Each slide must be exactly 100% of container width */
+  section.banner .tns-item {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    flex-shrink: 0 !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Allow horizontal touch gestures for slider on mobile */
+    touch-action: pan-x pan-y !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    position: relative !important;
+  }
+  
+  /* Ensure slide content fills the item */
+  section.banner .tns-item .slide {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    display: block !important;
+  }
+  
+  section.banner .slides {
+    visibility: visible !important;
+    width: 100% !important;
+    touch-action: pan-x !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  section.banner .slide {
+    visibility: visible !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    box-sizing: border-box !important;
+    touch-action: pan-x !important;
+    pointer-events: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Ensure custom-banner slides have proper height on mobile */
+  section.banner .custom-banner {
+    min-height: 50vh !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Ensure slider navigation dots are visible and clickable */
+  section.banner .tns-nav {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+  }
+  
+  section.banner .tns-nav button {
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+  }
+  
+  /* Ensure main content is visible */
+  main.main {
+    display: block !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    overflow: visible !important;
+    background-color: #ffffff !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 70px !important;
+  }
+  
+  header.banner,
+  #stickyNav {
+    max-height: 70px !important;
+    min-height: 50px !important;
+  }
+  
+  section.banner {
+    min-height: 40vh !important;
+    /* Ensure slider is touchable on mobile */
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  section.banner .slide {
+    min-height: 40vh !important;
+  }
+  
+  /* Mobile-specific slider touch fixes */
+  section.banner .banner-inner,
+  section.banner .tns-outer,
+  section.banner .tns-inner,
+  section.banner .tns-slider,
+  section.banner .tns-item,
+  section.banner .slides {
+    touch-action: pan-x pan-y !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  /* Force proper width calculation on mobile */
+  section.banner .tns-outer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  
+  section.banner .tns-inner {
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  
+  section.banner .tns-item {
+    width: 100vw !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    flex: 0 0 100vw !important;
+  }
+}
+
+
+/* Buttons */
+.btn-primary,
+.button-primary,
+.wp-block-button__link,
+.wp-block-file__button {
+  background-color: #1540D8 !important; /* Electric Tide */
+  color: #ffffff !important;
+  border-color: #1540D8 !important;
+}
+
+.btn-primary:hover,
+.button-primary:hover,
+.wp-block-button__link:hover {
+  background-color: #75B9F2 !important; /* Sky Surge */
+  border-color: #75B9F2 !important;
+}
+
+.btn-accent,
+.button-accent {
+  background-color: #F2BB05 !important; /* Golden Bang */
+  color: #151922 !important; /* Midnight Pulse */
+  border-color: #F2BB05 !important;
+}
+
+.btn-accent:hover,
+.button-accent:hover {
+  background-color: #F2BB05 !important;
+  opacity: 0.9;
+}
+
+/* Footer */
+footer,
+.content-info,
+footer.bg-primary {
+  background-color: #1540D8 !important; /* Midnight Pulse */
+  color: #FAEFD9 !important; /* Foam Gold */
+}
+
+footer a,
+.content-info a {
+  color: #75B9F2 !important; /* Sky Surge */
+}
+
+footer a:hover,
+.content-info a:hover {
+  color: #F2BB05 !important; /* Golden Bang */
+}
+
+/* Links */
+a {
+  color: #1540D8 !important; /* Electric Tide */
+}
+
+a:hover,
+a:focus {
+  color: #75B9F2 !important; /* Sky Surge */
+}
+
+/* Secondary text */
+.text-secondary {
+  color: #151922 !important; /* Midnight Pulse */
+  opacity: 0.9;
+}
+
+/* Text on colored backgrounds */
+.bg-primary .text-secondary,
+.bg-info .text-secondary {
+  color: #151922 !important; /* Midnight Pulse for contrast */
+}
+
+.bg-dark .text-secondary,
+.bg-midnight-pulse .text-secondary,
+footer .text-secondary {
+  color: #FAEFD9 !important; /* Foam Gold for contrast on dark backgrounds */
+}
+
+/* Cards and Sections */
+.card,
+.section {
+  background-color: #FAEFD9 !important; /* Foam Gold */
+}
+
+/* Borders */
+.border-primary {
+  border-color: #75B9F2 !important; /* Sky Surge */
+}
+
+.border-accent {
+  border-color: #F2BB05 !important; /* Golden Bang */
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  background-color: #FAEFD9 !important; /* Foam Gold */
+  border-color: #75B9F2 !important; /* Sky Surge */
+}
+
+.dropdown-menu a {
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+.dropdown-menu a:hover {
+  background-color: #75B9F2 !important; /* Sky Surge */
+  color: #ffffff !important;
+}
+
+/* Form elements */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  border-color: #75B9F2 !important; /* Sky Surge */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #1540D8 !important; /* Electric Tide */
+  box-shadow: 0 0 0 3px rgba(117, 185, 242, 0.2) !important;
+}
+
+/* Social icons */
+.social-icons a {
+  color: #ffffff !important; /* Midnight Pulse */
+}
+
+.social-icons a:hover {
+  color: #ffffff !important; /* Electric Tide */
+}
+
+/* Accent highlights */
+.highlight,
+mark {
+  background-color: #F2BB05 !important; /* Golden Bang */
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* Override any existing primary color usage */
+*[style*="#525ddc"],
+*[style*="#1a0e51"],
+*[style*="#32373c"] {
+  /* These will be overridden by more specific selectors above */
+}
+
+/* Gradient backgrounds using new palette */
+.gradient-primary {
+  background: linear-gradient(135deg, #75B9F2 0%, #1540D8 100%) !important;
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #F2BB05 0%, #1540D8 100%) !important;
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, #FAEFD9 0%, #75B9F2 50%, #1540D8 100%) !important;
+}
+
+.gradient-sunset {
+  background: linear-gradient(135deg, #F2BB05 0%, #75B9F2 50%, #1540D8 100%) !important;
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, #FAEFD9 0%, #F2BB05 100%) !important;
+}
+
+/* Body and main content areas */
+body {
+  background-color: #1540D8 !important; /* Electric Tide - matches header */
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* Hero/Banner sections */
+.hero,
+.banner-section,
+[data-bg-desktop],
+[data-bg-mobile] {
+  /* Background images will show through, but ensure text is readable */
+}
+
+.banner-button .btn,
+.banner-button .button {
+  background-color: #1540D8 !important; /* Electric Tide */
+  color: #ffffff !important;
+}
+
+.banner-button .btn:hover,
+.banner-button .button:hover {
+  background-color: #75B9F2 !important; /* Sky Surge */
+}
+
+/* Product cards and items */
+.product-card,
+.product-item,
+.woocommerce ul.products li.product {
+  background-color: #ffffff !important;
+  border-color: #75B9F2 !important; /* Sky Surge */
+}
+
+.product-card:hover,
+.product-item:hover {
+  border-color: #1540D8 !important; /* Electric Tide */
+  box-shadow: 0 4px 12px rgba(21, 64, 216, 0.2) !important;
+}
+
+/* Section dividers and curves */
+.curve,
+.top-curve,
+.bottom-curve {
+  fill: currentColor;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+.top-curve,
+.bottom-curve {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: auto !important;
+}
+
+/* Specifically target img tags with SVG curves */
+img.top-curve,
+img.bottom-curve,
+img.curve {
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: auto !important;
+  object-fit: fill !important;
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Also target object tags with SVG curves */
+object.curve {
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+/* Position top curves at the top */
+img.top-curve {
+  top: 0 !important;
+  z-index: 1 !important;
+}
+
+/* Position bottom curves at the bottom */
+img.bottom-curve {
+  bottom: 0 !important;
+}
+
+.text-primary .curve,
+.text-primary svg {
+  color: #75B9F2 !important; /* Sky Surge */
+}
+
+.text-secondary .curve,
+.text-secondary svg {
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* Cart and shopping elements */
+.cart-sidebar,
+.woocommerce-cart-form {
+  background-color: #FAEFD9 !important; /* Foam Gold */
+}
+
+.cart-sidebar header h3 {
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* USP (Unique Selling Points) section */
+.usps {
+  background-color: #F2BB05 !important; /* Golden Bang - Yellow */
+  position: relative;
+  overflow: visible;
+  margin-top: 0;
+  padding-top: 2rem !important;
+}
+
+.usps .top-curve {
+  top: -77px !important;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.usps .container {
+  position: relative;
+  z-index: 2;
+}
+
+.usps .text-primary {
+  color: #1540D8 !important; /* Electric Tide for emphasis */
+}
+
+/* Stockists section */
+.stockists {
+  background-color: #75B9F2 !important; /* Sky Surge */
+}
+
+.stockists .text-secondary {
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* Homepage featured products */
+.homepage-featured-products-slider {
+  background-color: #F2BB05 !important; /* Foam Gold */
+}
+
+.homepage-featured-products-slider .text-primary {
+  color: #1540D8 !important; /* Electric Tide */
+}
+
+/* As Seen On section */
+.as-seen-on {
+  background-color: #1540D8 !important; /* Sky Surge */
+}
+
+.as-seen-on .container {
+  position: relative;
+  z-index: 5;
+}
+
+.as-seen-on .text-secondary {
+  color: #ffffff !important; /* White for visibility on blue background */
+}
+
+/* Additional utility classes */
+.text-sky-surge {
+  color: #75B9F2 !important;
+}
+
+.text-foam-gold {
+  color: #FAEFD9 !important;
+}
+
+.bg-sky-surge {
+  background-color: #75B9F2 !important;
+}
+
+.bg-foam-gold {
+  background-color: #FAEFD9 !important;
+}
+
+/* Override Bootstrap/theme default colors */
+.btn-secondary {
+  background-color: #FAEFD9 !important; /* Foam Gold */
+  color: #151922 !important; /* Midnight Pulse */
+  border-color: #75B9F2 !important; /* Sky Surge */
+}
+
+.btn-secondary:hover {
+  background-color: #75B9F2 !important; /* Sky Surge */
+  color: #ffffff !important;
+  border-color: #75B9F2 !important;
+}
+
+/* Badge and alert styles */
+.badge-primary,
+.alert-info {
+  background-color: #75B9F2 !important; /* Sky Surge */
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+.badge-accent,
+.alert-warning {
+  background-color: #F2BB05 !important; /* Golden Bang */
+  color: #151922 !important; /* Midnight Pulse */
+}
+
+/* Table styles */
+table thead {
+  background-color: #1540D8 !important; /* Electric Tide */
+  color: #ffffff !important;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #FAEFD9 !important; /* Foam Gold */
+}
+
+table tbody tr:hover {
+  background-color: #75B9F2 !important; /* Sky Surge */
+  color: #151922 !important;
+}
+
+
+.usps img{
+  border: none !important;
+}
+
+/* Ensure SVG icons are visible and properly styled on yellow background */
+.usps figure img {
+  opacity: 1 !important;
+}
+
+@media (min-width: 992px) {
+  header.banner .row {
+    flex-wrap: nowrap;
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  #stickyNav .container{
+    max-width: 1300px;
+  }
+}
+
+header.banner {
+  color: #1540D8 !important;
+}
+
+@media (max-width: 1200px) {
+  header.banner .nav-toggle {
+    left: 0% !important;
+  }
+}
+
+/* FINAL OVERRIDE - Force hide mobile-nav-content on desktop - This rule must be last */
+@media (min-width: 992px) {
+  /* Target by class combination */
+  .mobile-nav-content.d-lg-none,
+  header#stickyNav .navigation .mobile-nav-content,
+  header#stickyNav .navigation .mobile-nav-content *,
+  body header#stickyNav .navigation .mobile-nav-content,
+  body header#stickyNav .navigation .mobile-nav-content *,
+  #stickyNav .navigation .mobile-nav-content.d-lg-none,
+  #stickyNav .navigation .mobile-nav-content.d-lg-none * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    clip: rect(0, 0, 0, 0) !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+}
