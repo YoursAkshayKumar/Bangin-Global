@@ -69,10 +69,16 @@ body > * {
 
 .product-section:nth-child(even) {
   background-color: rgb(250 239 217 / 53%);
+  background-image: url("../images/brand-background.png");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 .product-section:nth-child(odd) {
   background-color: rgb(250 239 217 / 53%);
+  background-image: url("../images/brand-background.png");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 .product-main-section {
@@ -399,6 +405,13 @@ body > * {
   /* Product Section Mobile */
   .product-section {
     padding: 3rem 15px !important;
+  }
+  
+  /* Fix background image on mobile - background-attachment: fixed doesn't work on iOS */
+  body {
+    background-attachment: scroll !important;
+    background-size: auto !important;
+    background-repeat: repeat !important;
   }
   
   .section-container {
